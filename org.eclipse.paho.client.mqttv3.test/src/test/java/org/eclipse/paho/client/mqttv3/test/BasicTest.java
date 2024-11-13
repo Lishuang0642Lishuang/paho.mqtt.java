@@ -330,6 +330,10 @@ public class BasicTest {
   }
 
 
+  /**
+   * 测试连接 tcp://iot.eclipse.org:1882 可以连接成功*
+   * @throws Exception
+   */
   @Test
   public void test330() throws Exception {
     String methodName = Utility.getMethodName();
@@ -366,8 +370,11 @@ public class BasicTest {
     }
     Assert.assertEquals(before_thread_count, after_count);
   }
-  
-  
+
+  /**
+   * 本地用docker启动emqx, 测试连接本地emqx,可以连接成功*
+   * @throws Exception
+   */
   @Test
   public void test402() throws Exception {
     String methodName = Utility.getMethodName();
