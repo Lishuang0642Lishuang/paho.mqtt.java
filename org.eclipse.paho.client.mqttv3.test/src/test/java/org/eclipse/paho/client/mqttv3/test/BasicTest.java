@@ -242,6 +242,7 @@ public class BasicTest {
   }
 
   /**
+   * msg的默认值
    * @throws Exception 
    */
   @Test
@@ -310,6 +311,7 @@ public class BasicTest {
   }
 
   /**
+   * connOpts的默认值
    * @throws Exception 
    */
   @Test
