@@ -502,6 +502,11 @@ public class BasicTest {
     Assert.assertEquals(after_count, before_thread_count + pool_size);
   }
 
+  /**
+   * 直接强制关闭，大概要花10s才能关闭
+   * 约定2s,  2s后还是没有关闭，会强制关闭
+   * @throws Exception
+   */
   @Test
   public void testDisconnectForcibly() throws Exception {
     String methodName = Utility.getMethodName();
