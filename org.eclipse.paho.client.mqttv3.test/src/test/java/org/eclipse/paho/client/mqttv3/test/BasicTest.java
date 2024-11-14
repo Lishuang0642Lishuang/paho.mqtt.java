@@ -373,6 +373,8 @@ public class BasicTest {
 
   /**
    * 本地用docker启动emqx, 测试连接本地emqx,可以连接成功*
+   * connect的时候，有4个线程：Ping  Call  Rec  Snd
+   * disconnect的时候，线程直接断掉*
    * @throws Exception
    */
   @Test
@@ -440,8 +442,14 @@ public class BasicTest {
     }
     Assert.assertEquals(before_thread_count, after_count);
   }
-  
-  
+
+
+  /**
+   * * 本地docker启动eqmx, 测试连接本地emqx, 可以连接成功
+   * *connect的时候，线程池会开启多个线程 Con Call  Rec Snd
+   * disconnect的时候，线程池中Con会变成Disc线程*
+   * @throws Exception
+   */
   @Test
   public void test402a() throws Exception {
     String methodName = Utility.getMethodName();
