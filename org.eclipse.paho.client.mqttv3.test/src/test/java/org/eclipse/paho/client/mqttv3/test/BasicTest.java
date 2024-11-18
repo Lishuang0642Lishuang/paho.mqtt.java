@@ -192,6 +192,7 @@ public class BasicTest {
   }
 
   /**
+   * 可以正常连接本地emqx，订阅topic
    * @throws Exception 
    */
   @Test
