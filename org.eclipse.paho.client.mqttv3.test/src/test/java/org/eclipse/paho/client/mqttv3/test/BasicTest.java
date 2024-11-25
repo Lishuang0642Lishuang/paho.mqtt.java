@@ -142,6 +142,7 @@ public class BasicTest {
   }
 
   /**
+   * 本地测试通过
    * @throws Exception 
    */
   @Test
